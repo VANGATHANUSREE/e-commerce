@@ -1,0 +1,46 @@
+.badge {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  
+  .budget-friendly {
+    background-color: #c6efce;
+    color: #2ecc71;
+  }
+  
+  .premium-product {
+    background-color: #f7d2c4;
+    color: #e67e73;
+  }
+  
+  .in-stock {
+    color: #2ecc71;
+  }
+  
+  .out-of-stock {
+    color: #e74c3c;
+  }
+  
+  .low-stock-warning {
+    color: #f1c40f;
+  }
+  
+  .discount-label {
+    background-color: #f7d2c4;
+    color: #e67e73;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  
+  .free-shipping {
+    background-color: #c6efce;
+    color: #2ecc71;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+  }
