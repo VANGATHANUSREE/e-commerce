@@ -6,30 +6,31 @@
   }
   
   .budget-friendly {
-    background-color: #c6efce;
-    color: #2ecc71;
+    background-color: #03ff35;
+    color: hsl(146, 100%, 99%);
   }
   
   .premium-product {
-    background-color: #f7d2c4;
-    color: #e67e73;
+    background-color: #fa0921;
+    color: white;
   }
   
   .in-stock {
-    color: #2ecc71;
+    color: hsl(133, 97%, 50%);
+    font-weight: bold;
   }
   
   .out-of-stock {
-    color: #e74c3c;
+    color: #fd1f07;
   }
   
   .low-stock-warning {
-    color: #f1c40f;
+    color: #f05e5e;
+    font-weight: bolder;
   }
   
   .discount-label {
-    background-color: #f7d2c4;
-    color: #e67e73;
+    background-color: #0ae0e7;
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 12px;
@@ -37,8 +38,9 @@
   }
   
   .free-shipping {
-    background-color: #c6efce;
-    color: #2ecc71;
+    background-color: #0921fc;
+    color: aliceblue;
+    font-weight: bolder;
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 12px;

@@ -4,19 +4,22 @@ import Data from '../Data';
 import './ProductDetails.css'
 
 const ProductDetails = () => {
+  // Passed id value as parameters to retrieve data
   const { id } = useParams();
+  // to find particular products by using id from data
   const product = Data.find((item) => item.id === parseInt(id));
 
   return (
   
-    <div className="product-details">
-      <h1>{product.name}</h1>
+    <div className="container">
+      <h2>{product.name}</h2>
       {product.image ? (
         <img src={product.image} alt={product.name} />
       ) : (
         <img src="https://via.placeholder.com/150" alt="Product Image" />
       )}
       <p> Price: 
+        {/* used to identify the sale items and display the discount price  */}
         {product.sale ? (
           <span>
             <s>Rs. {product.price}</s>
@@ -24,17 +27,26 @@ const ProductDetails = () => {
           </span>
         ) : (
           <span>Rs. {product.price}</span>
-        )}</p>
+        )} 
+        <br />
+              {product.sale && (
+      // if the item in the data list is eligible for sale then the discount lable will be displayed
+        <span className="discount-label">Discount Available!</span>
+      )}</p>
+      {/* displaying a budget friendly badge for the products under 1000 rupees */}
       {product.price < 1000 && (
         <span className="badge budget-friendly">Budget-Friendly</span>
       )}
+      {/* displaying premium product badge for products above 50000 rupees */}
       {product.price > 50000 && (
         <span className="badge premium-product">Premium Product</span>
       )}
       <p>
+        {/* Stock related data  */}
         Stock: {product.stock > 0 ? (
           <span className="in-stock">In Stock</span>
-        ) : (
+        ) : 
+        (
           <span className="out-of-stock">Out of Stock</span>
         )}
         {product.stock < 5 && product.stock > 0 && (
@@ -43,9 +55,7 @@ const ProductDetails = () => {
           </span>
         )}
       </p>
-      {product.sale && (
-        <span className="discount-label">Discount Available!</span>
-      )}
+      {/* free shipping above rupees 5000 */}
       {product.price > 5000 && (
         <span className="free-shipping">Free Shipping</span>
       )}
